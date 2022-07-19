@@ -1,0 +1,109 @@
+<!-- <html>
+<head>
+<title>Home page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+max-width: max-content;
+margin: auto;
+font-family: 'Anek Malayalam', sans-serif;
+
+}
+
+
+
+
+ 
+</style>
+
+
+<script> 
+
+function validateForm() {
+  let name = document.forms["myForm"]["sname"].value;
+  let pwd1 = document.forms["myForm"]["pwd"].value;
+  let counter =0;
+  let pattern = /[0-9]/;
+  let text=pwd1.slice(-1);
+  let ucase=/[A-Z]/;
+  let scase=/[a-z]/;
+  let ucase1=pwd1.match(ucase);
+  let scase1=pwd1.match(scase);
+
+  alert(ucase1);
+  if (name == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  if(pwd1.length<8){
+   alert("Password should be atleast 8 got "+pwd1.length)
+   return false;
+
+  }
+  if(!text.match(pattern)){
+   alert("End with digit  "+text)
+   return false;
+
+  }
+  if(ucase1==null){
+   alert("Uppercase issue  "+pwd1)
+   return false;
+
+  }
+  if(scase1==null){
+   alert("lowercase Issue "+pwd1)
+   return false;
+
+  }
+
+ 
+
+
+}
+
+
+</script>
+
+</head>
+<body>
+
+<h1> Student System</h1>
+<div>
+<section>
+<!-- 
+<form name="myForm" action="home.html" onsubmit="return validateForm()" method="post"> -->
+<!-- 
+    <form name="myForm" action="home.html"  method="post">    
+    <h1> Enter Student name and Grade</h1>
+    <table> 
+        <tr> 
+            <td>  Name: </td> 
+            <td> <input type="text" placeholder="Enter  Name" name="sname"></td>
+        </tr>
+
+        <tr> 
+            <td>  password: </td> 
+            <td> <input type="password" placeholder="Enter passsword" name="pwd"></td>
+        </tr>
+    </table>
+      
+         <input type="Submit" value="submit"/>
+            
+    
+</form>
+</section>
+
+</div>
+</body>
+
+</html> -->
+
+<!-- 
+var node=document.createElement("LI");
+var textnode=document.createTextNode(firstname);
+node.appendChild(textnode);
+document.getElementById("demo").appendChild(node); --> -->

@@ -1,0 +1,86 @@
+{%extends 'base.html' %}
+
+{%block body%} 
+<h2> Lets  see if you password meets the requirements</h2>
+<h3>You entered {{ dat }}</h3>
+<div id="div1"></div>
+
+<script>
+var pwd1='{{ dat }}'
+// alert(pwd1)
+var counter =0;
+var pattern = /[0-9]/;
+var text=pwd1.slice(-1);
+// alert(text)
+var ucase=/[A-Z]/;
+var scase=/[a-z]/;
+var ucase1=pwd1.match(ucase);
+var scase1=pwd1.match(scase);
+var counter=0;
+
+if(!text.match(pattern)){
+    var counter=1
+    alert("inside loop")
+    alert(ucase1)
+    var para = document.createElement("p");
+    var node = document.createTextNode("Oh no! Looks like you had issues with your password! Here are Requrements you failed");
+    para.appendChild(node);
+    var element = document.getElementById("div1");
+    element.appendChild(para);
+    var para1 = document.createElement("li");
+    var node1 = document.createTextNode("You Didn't end your pasword with a number");
+    para1.appendChild(node1);
+    var element1 = document.getElementById("div1");
+    element1.appendChild(para1);
+    alert('Done')
+  }
+
+  if((ucase1==null || scase1==null) && counter==0){
+    var counter=1
+    var para = document.createElement("p");
+    var node = document.createTextNode("Oh no! Looks like you had issues with your password! Here are Requrements you failed");
+    para.appendChild(node);
+    var element = document.getElementById("div1");
+    element.appendChild(para);
+  }    
+   
+    
+  
+
+  if(scase1==null){
+    var counter=1
+ 
+    var para1 = document.createElement("li");
+    var node1 = document.createTextNode("You did not use a Lower case letter");
+    para1.appendChild(node1);
+    var element1 = document.getElementById("div1");
+    element1.appendChild(para1);
+    
+  }
+  if(ucase1==null){
+    var counter=1
+    
+    var para1 = document.createElement("li");
+    var node1 = document.createTextNode("You did not use a Upper case letter");
+    para1.appendChild(node1);
+    var element1 = document.getElementById("div1");
+    element1.appendChild(para1);
+ 
+}
+
+if(counter==0){
+    var para = document.createElement("p");
+    var node = document.createTextNode("Your Password passed the 3 Requirements!!");
+    para.appendChild(node);
+    var element = document.getElementById("div1");
+    element.appendChild(para);
+
+}
+
+
+
+
+
+</script>
+
+{% endblock %} 

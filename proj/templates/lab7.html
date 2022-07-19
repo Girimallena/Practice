@@ -1,0 +1,59 @@
+
+{%extends 'base.html' %}
+
+
+{% block style %}
+
+body {
+  <!-- max-width: max-content; -->
+  margin: auto;
+  font-family: 'Anek Malayalam', sans-serif;
+  
+  }
+
+{% endblock %} 
+
+
+{%block body%} 
+
+
+
+<br>
+<div>
+  <h4> Welcome to password checker</h4> 
+  <h4> Lets see your password is secure</h4> <br>
+  <h4> Fill out the below with a user name and password that has these restraints</h4>
+  <ul>
+          <li>Must Have Uppercase Some where</li>
+          <li>Must Have Lowercase Some where</li>
+          <li>Must Have Number at end</li>
+
+  </ul>
+
+<section>
+<!-- 
+<form name="myForm" action="home.html" onsubmit="return validateForm()" method="post"> -->
+
+    <form name="myForm" action="Results.html"  method="post">    
+    
+    <table> 
+        <tr> 
+            <td>  Login: </td> 
+            <td> <input type="text" placeholder="Enter User Name" required name="sname"></td>
+        </tr>
+
+        <tr> 
+            <td>  password: </td> 
+            <td> <input type="password" placeholder="Enter passsword" required name="pwd"></td>
+        </tr>
+    </table>
+      
+         <input type="Submit" value="submit"/>
+            
+    
+</form>
+</section>
+
+</div>
+
+{% endblock %} 
