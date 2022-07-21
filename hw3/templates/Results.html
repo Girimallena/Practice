@@ -1,0 +1,60 @@
+{%extends 'Base.html' %}
+
+{% block style %} 
+
+#students {
+    
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #students td, #students th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  
+  
+  #students tr:hover {background-color: orange;}
+  
+  #students th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: rgb(130, 149, 196);
+    color: white;
+  }
+  
+  #students td {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+   
+    
+  }
+{% endblock %}  
+
+{%block body%} 
+
+<h1> {{ msg1 }} </h1>
+
+<!-- 
+<table id="students">
+<br>    
+<tr >
+  <th>ID</th>
+  <th>Name</th> 
+  <th>Grade</th>
+</tr>
+{% for r in msg12 %}
+<tr>
+  <td>{{ r[0] }}</td>
+  <td>{{ r[1] }}</td> 
+  <td>{{ r[2] }}</td>
+</tr>
+{% endfor %}
+</table> -->
+
+
+
+{% endblock %} 

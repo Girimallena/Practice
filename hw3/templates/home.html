@@ -1,0 +1,98 @@
+<html>
+<head>
+<title>Home page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anek+Malayalam:wght@300&display=swap" rel="stylesheet">
+
+<style>
+
+body {
+max-width: max-content;
+margin: auto;
+font-family: 'Anek Malayalam', sans-serif;
+
+}
+
+
+
+</style>
+
+</head>
+<body>
+
+<h1> Student System</h1>
+<div>
+<section>
+
+<form name="myForm" action="Results"  method="post">
+    <h1> Enter Student name and Grade</h1>
+    <table>
+        <tr>
+            <td>  Name: </td>
+            <td> <input type="text" placeholder="Enter Student Name" name="sname" required></td>
+        </tr>
+
+        <tr>
+            <td>  Grade: </td>
+            <td> <input type="number" placeholder="Enter Final Grade" max= 100 name="gr" required></td>
+        </tr>
+    </table>
+
+    <input type="Submit" value="submit"/>
+    <!-- <p> {{msg1}}</p> -->
+
+</form>
+</section>
+
+<section>
+
+    <form action="Delete" method="post">
+        <h1> Remove Student</h1>
+        <table>
+            <tr>
+                <td>  ID: </td>
+                <td> <input type="number" placeholder="Enter Student ID" name="DEL_ID" required></td>
+            </tr>
+        </table>  <br>
+        <input type="Submit" value="Delete"/>
+    </form>
+    </section>
+    <br>
+<section>
+    <section>
+
+        <form action="Update" method="post">
+            <h1> Update Grade By Giving  ID</h1>
+            <table>
+                <tr>
+                    <td>  ID: </td>
+                    <td> <input type="number" placeholder="Enter Student ID" name="UID" required></td>
+                </tr>
+                <tr>
+                    <td>  Grade: </td>
+                    <td> <input type="number" placeholder="Enter Final Grade"  max= 100 name="ugr"></td>
+                </tr>
+            </table>  <br>
+            <input type="Submit" value="update"/>
+        </form>
+        </section>
+
+    <section>
+
+    <table>
+        <h1> View Student Data Using below Views</h1>
+        <tr>
+            <td> <input type="button" value="List All Students" onclick="window.location.href='{{ url_for( 'All') }}';"></td><br><td></td>
+
+            <td> <input type="button" value="List Students who Pass" onclick="window.location.href='{{ url_for( 'PASS') }}';"></td>
+        </tr>
+    </table>
+
+
+</section>
+
+</div>
+</body>
+
+</html>
